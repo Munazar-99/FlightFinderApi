@@ -1,3 +1,4 @@
+import { Flights } from './type';
 import express from 'express';
 import cors from 'cors'
 import moment from 'moment';
@@ -48,6 +49,21 @@ app.get('/specified-flight', (req: Request, res: Response) => {
     return res.status(404).json('route not available');
 });
 
+app.patch('/book/:flightId', (req: Request, res: Response) => {
+    const flightId = req.params.flightId;
+    flightDetails.forEach(route => {
+        route.itineraries.forEach(flight => {
+            if (flight.flight_id === flightId) {
+                if (flight.availableSeats > 0) {
+                    flight.availableSeats--
+                    return res.status(200).json(flightDetails);
+                }
+                return res.status(404).json('no more bookings left');
+            }
+            
+        })
+    })
+});
 
 
 export default app;
