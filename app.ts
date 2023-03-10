@@ -4,6 +4,7 @@ import cors from 'cors'
 import moment from 'moment';
 import { Request, Response, Application } from 'express';
 import { flightDetails } from './flights'
+import { getTimeDiff, generateTicket } from './utility';
 
 
 const app: Application = express();
@@ -60,10 +61,63 @@ app.patch('/book/:flightId', (req: Request, res: Response) => {
                 }
                 return res.status(404).json('no more bookings left');
             }
-            
         })
     })
 });
 
+app.get('/calculate', (req: Request, res: Response) => {
+    const {
+        departure,
+        destination,
+        specifiedDate
+    }: {
+        departure: string,
+        destination: string,
+        specifiedDate: string
+    } = req.body;
+
+    const validDate = moment(specifiedDate, 'MM/DD/YYYY');
+    let possibleConnections: Flights[] = [];
+    let ListofDestinations = [destination];
+
+
+    for (let index = 0; index < 3; index++) {
+        if (!ListofDestinations[index]) {
+            return  possibleConnections.length > 1 
+            ? res.status(200).json(possibleConnections.reverse()) 
+            : res.status(404).json('plane doesnt go here');
+ 
+        }
+        const routesToDestination = flightDetails
+            .filter(
+                flight => flight.arrivalDestination.toLowerCase() === ListofDestinations[index].toLowerCase()
+            )
+        if (routesToDestination.length < 1) {
+            return res.status(404).json('plane doesnt go here');
+        }
+        possibleConnections = [...possibleConnections, routesToDestination[0]]
+
+        routesToDestination.forEach(flight => {
+            const directRoutestoDeparture = flightDetails.filter((route =>
+                route.departureDestination.toLowerCase() === departure.toLowerCase()
+                && route.arrivalDestination.toLowerCase() === flight.departureDestination.toLowerCase()
+            ))
+
+            if (directRoutestoDeparture.length < 1) {
+                return ListofDestinations.push(flight.departureDestination)
+            }
+            directRoutestoDeparture.forEach(route => {
+                possibleConnections = [...possibleConnections, route,]
+            })
+
+        })
+    }
+    generateTicket(specifiedDate, possibleConnections.reverse())
+
+    return possibleConnections.length > 2 
+    ?  res.status(200).json(possibleConnections.reverse())
+    : res.status(404).json('you might need to add more stops');
+
+});
 
 export default app;

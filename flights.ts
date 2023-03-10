@@ -912,7 +912,234 @@ export const flightDetails: Flights[] = [
     {
         "route_id": "c76824c1",
         "departureDestination": "Amsterdam",
-        "arrivalDestination": "Oslo",
+        "arrivalDestination": "egypt",
+        "itineraries": [
+            {
+                "flight_id": "376ecc32",
+                "departureAt": "2023-03-29T11:00:00.000Z",
+                "arrivalAt": "2023-03-29T14:00:00.000Z",
+                "availableSeats": 13,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 187.27,
+                    "child": 117.34
+                }
+            },
+            {
+                "flight_id": "7ce5110f",
+                "departureAt": "2023-03-30T11:00:00.000Z",
+                "arrivalAt": "2023-03-30T14:00:00.000Z",
+                "availableSeats": 86,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 70.79,
+                    "child": 82.51
+                }
+            },
+            {
+                "flight_id": "70466cc2",
+                "departureAt": "2023-03-30T17:00:00.000Z",
+                "arrivalAt": "2023-03-30T20:00:00.000Z",
+                "availableSeats": 15,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 140.39,
+                    "child": 144.88
+                }
+            },
+            {
+                "flight_id": "737ef3a4",
+                "departureAt": "2023-03-30T21:00:00.000Z",
+                "arrivalAt": "2023-03-31T00:00:00.000Z",
+                "availableSeats": 40,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 185.52,
+                    "child": 95.86
+                }
+            },
+            {
+                "flight_id": "d2980068",
+                "departureAt": "2023-03-31T03:00:00.000Z",
+                "arrivalAt": "2023-03-31T06:00:00.000Z",
+                "availableSeats": 27,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 96.31,
+                    "child": 64.35
+                }
+            },
+            {
+                "flight_id": "49910152",
+                "departureAt": "2023-04-01T03:00:00.000Z",
+                "arrivalAt": "2023-04-01T06:00:00.000Z",
+                "availableSeats": 16,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 124.08,
+                    "child": 124.56
+                }
+            },
+            {
+                "flight_id": "97bb111b",
+                "departureAt": "2023-04-01T07:00:00.000Z",
+                "arrivalAt": "2023-04-01T10:00:00.000Z",
+                "availableSeats": 82,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 175.41,
+                    "child": 51.73
+                }
+            },
+            {
+                "flight_id": "23813979",
+                "departureAt": "2023-04-02T07:00:00.000Z",
+                "arrivalAt": "2023-04-02T10:00:00.000Z",
+                "availableSeats": 14,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 180.6,
+                    "child": 136.52
+                }
+            },
+            {
+                "flight_id": "9327797c",
+                "departureAt": "2023-04-02T13:00:00.000Z",
+                "arrivalAt": "2023-04-02T16:00:00.000Z",
+                "availableSeats": 62,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 66.78,
+                    "child": 134.56
+                }
+            },
+            {
+                "flight_id": "f44c177a",
+                "departureAt": "2023-04-02T17:00:00.000Z",
+                "arrivalAt": "2023-04-02T20:00:00.000Z",
+                "availableSeats": 48,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 80.9,
+                    "child": 167.34
+                }
+            },
+            {
+                "flight_id": "529fe331",
+                "departureAt": "2023-04-02T23:00:00.000Z",
+                "arrivalAt": "2023-04-03T02:00:00.000Z",
+                "availableSeats": 71,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 180.6,
+                    "child": 136.52
+                }
+            },
+            {
+                "flight_id": "341e5513",
+                "departureAt": "2023-04-03T23:00:00.000Z",
+                "arrivalAt": "2023-04-04T02:00:00.000Z",
+                "availableSeats": 92,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 183.68,
+                    "child": 123.69
+                }
+            },
+            {
+                "flight_id": "e80b9947",
+                "departureAt": "2023-04-04T03:00:00.000Z",
+                "arrivalAt": "2023-04-04T06:00:00.000Z",
+                "availableSeats": 90,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 175.41,
+                    "child": 51.73
+                }
+            },
+            {
+                "flight_id": "9877c3b6",
+                "departureAt": "2023-04-05T03:00:00.000Z",
+                "arrivalAt": "2023-04-05T06:00:00.000Z",
+                "availableSeats": 79,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 168.41,
+                    "child": 137.09
+                }
+            },
+            {
+                "flight_id": "4679bd4d",
+                "departureAt": "2023-04-05T09:00:00.000Z",
+                "arrivalAt": "2023-04-05T12:00:00.000Z",
+                "availableSeats": 91,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 71.05,
+                    "child": 114
+                }
+            },
+            {
+                "flight_id": "271c3a11",
+                "departureAt": "2023-04-05T13:00:00.000Z",
+                "arrivalAt": "2023-04-05T16:00:00.000Z",
+                "availableSeats": 35,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 80.9,
+                    "child": 167.34
+                }
+            },
+            {
+                "flight_id": "a4ce6dff",
+                "departureAt": "2023-04-05T19:00:00.000Z",
+                "arrivalAt": "2023-04-05T22:00:00.000Z",
+                "availableSeats": 30,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 145.11,
+                    "child": 94.58
+                }
+            },
+            {
+                "flight_id": "b9e70f64",
+                "departureAt": "2023-04-06T19:00:00.000Z",
+                "arrivalAt": "2023-04-06T22:00:00.000Z",
+                "availableSeats": 94,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 113.15,
+                    "child": 131.45
+                }
+            },
+            {
+                "flight_id": "f13d99ec",
+                "departureAt": "2023-04-06T23:00:00.000Z",
+                "arrivalAt": "2023-04-07T02:00:00.000Z",
+                "availableSeats": 11,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 136.18,
+                    "child": 79.27
+                }
+            },
+            {
+                "flight_id": "cbbc7735",
+                "departureAt": "2023-04-07T23:00:00.000Z",
+                "arrivalAt": "2023-04-08T02:00:00.000Z",
+                "availableSeats": 84,
+                "prices": {
+                    "currency": "SEK",
+                    "adult": 197.8,
+                    "child": 168.14
+                }
+            }
+        ]
+    },
+    {
+        "route_id": "c76824c1",
+        "departureDestination": "Oslo",
+        "arrivalDestination": "Rome",
         "itineraries": [
             {
                 "flight_id": "376ecc32",
